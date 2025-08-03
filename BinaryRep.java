@@ -1,10 +1,10 @@
 public class BinaryRep {
     public static void main(String[] args) {
         int n = 10;
-        System.out.println(BinaryRep1(n));
+        System.out.println(BitCount2(n));
     }
 
-    private static int BinaryRep1(int n){
+    private static int BitCount1(int n){
         char[] x = Integer.toBinaryString(n).toCharArray();
         int count=0;
         
@@ -14,5 +14,9 @@ public class BinaryRep {
             }
         }
         return count;      
+    }
+
+    private static int BitCount2(int n){
+        return Integer.bitCount(n);
     }
 }
